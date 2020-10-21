@@ -1,7 +1,7 @@
 {
   "name": "dpricebranding",
   "version": "1.0.0",
-  "description": "Smart contracts for DpriceBranding project (Ethereum NFTs)",
+  "description": "Smart contracts for DpriceBranding project",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -24,6 +24,6 @@
     "@truffle/hdwallet-provider": "^1.1.1",
     "@uniswap/v2-core": "^1.0.1",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "truffle-hdwallet-provider-privkey": "^0.3.0"
+    "ganache-core": "^2.13.0"
   }
 }

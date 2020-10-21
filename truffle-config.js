@@ -18,8 +18,8 @@
  *
  */
  var privateKeys = [
-  "0000000000000000000000000000000000000000000000000000000000000001",
-  "0000000000000000000000000000000000000000000000000000000000000002",
+  "0x0000000000000000000000000000000000000000000000000000000000000001",
+  "0x0000000000000000000000000000000000000000000000000000000000000002",
 ];
  //const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
@@ -30,8 +30,11 @@
 /*
 var provider = new HDWalletProvider(privateKeys, "http://127.0.0.1:8545", 0, 2); */
 
-const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
-const provider = new HDWalletProvider(privateKeys, "http://localhost:8545");
+//const HDWalletProvider = require("@truffle/hdwallet-provider"); // truffle-hdwallet-provider-privkey
+/* const provider = new HDWalletProvider({
+  privateKeys: privateKeys, 
+  providerOrUrl: "http://localhost:8545" 
+}); */
 
 module.exports = {
   /**
@@ -52,12 +55,15 @@ module.exports = {
     // options below to some value.
     //
     development: {
-    host: "127.0.0.1",     // Localhost (default: none)
-    port: 8545,            // Standard Ethereum port (default: none)
-    network_id: "*",       // Any network (default: none)
-    gasPrice:   0,
-    provider: provider
-   }, 
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+     // gasPrice: 1,
+/*       provider: function() {
+        return provider;
+      }, */
+      //websockets: true
+    }, 
    /* testrpc:{
     host: "localhost",
     port: 8545,
@@ -92,10 +98,10 @@ module.exports = {
   },
 
   // Set default mocha options here, use special reporters etc.
-  mocha: {
-     timeout: 100000
+/*   mocha: {
+    enableTimeouts: false
   },
-
+ */
   // Configure your compilers
   compilers: {
     solc: {
@@ -111,3 +117,5 @@ module.exports = {
     },
   },
 };
+
+provider.engine.stop();
