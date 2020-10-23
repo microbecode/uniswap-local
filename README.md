@@ -17,9 +17,3 @@ To test creating an ETH/Token pair do the following:
 1. Run test:
 `truffle test`
 
-For Token/Token pairs you can enable some of the commented-out code
-
-# Issues
-
-The code doesn't work - for token/token pair it gives math underflow errors. For Eth/token pair it gives a random revent. Couldn't figure out what's wrong.
-

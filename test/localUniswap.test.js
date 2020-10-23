@@ -12,7 +12,7 @@ contract('test', accounts  => {
   const symbol = 'MTKN';
 
   it('liquidity', async () => {
-    console.log('account', accounts[0]);
+    console.log('used account', accounts[0]);
     this.token1 = await token1Artifact.new(tokenAmount, name, symbol, {from: accounts[0] }); 
     
     this.router = await routerArtifact.deployed();
@@ -20,7 +20,6 @@ contract('test', accounts  => {
     this.factory = await factoryArtifact.at(factory);
 
     const wethAddr = await this.router.WETH.call();
-    console.log('weth add', wethAddr);  
 
     await this.token1.approve(this.router.address, tokenAmount, {from: accounts[0] });
 
