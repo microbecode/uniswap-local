@@ -17,24 +17,12 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
- var privateKeys = [
-  "0x0000000000000000000000000000000000000000000000000000000000000001",
-  "0x0000000000000000000000000000000000000000000000000000000000000002",
-];
+
  //const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
-
-/*
-var provider = new HDWalletProvider(privateKeys, "http://127.0.0.1:8545", 0, 2); */
-
-//const HDWalletProvider = require("@truffle/hdwallet-provider"); // truffle-hdwallet-provider-privkey
-/* const provider = new HDWalletProvider({
-  privateKeys: privateKeys, 
-  providerOrUrl: "http://localhost:8545" 
-}); */
 
 module.exports = {
   /**
@@ -58,11 +46,7 @@ module.exports = {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
-     // gasPrice: 1,
-/*       provider: function() {
-        return provider;
-      }, */
-      //websockets: true
+      websockets: true
     }
    /* testrpc:{
     host: "localhost",
@@ -117,5 +101,3 @@ module.exports = {
     },
   },
 };
-
-//provider.engine.stop();

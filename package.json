@@ -1,7 +1,7 @@
 {
-  "name": "dpricebranding",
+  "name": "uniswap-local",
   "version": "1.0.0",
-  "description": "Smart contracts for DpriceBranding project",
+  "description": "Uniswap local instance",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -11,17 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microbecode/DPriceBranding.git"
+    "url": "git+https://github.com/microbecode/uniswap-local.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/microbecode/DPriceBranding/issues"
+    "url": "https://github.com/microbecode/uniswap-local/issues"
   },
-  "homepage": "https://github.com/microbecode/DPriceBranding#readme",
+  "homepage": "https://github.com/microbecode/uniswap-local#readme",
   "dependencies": {
     "@truffle/contract": "^4.2.25",
-    "@truffle/hdwallet-provider": "^1.1.1",
     "@uniswap/v2-core": "^1.0.1",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "ganache-core": "^2.13.0"
